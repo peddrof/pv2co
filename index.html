@@ -1,10 +1,364 @@
 <!DOCTYPE html>
-<html>
-    <head>
-<meta charset="utf-8">
-<title>PV2CO</title>
-    </head>
-    <body>
-        <h1>Hello World</h1>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PV2CO offers AI and automation solutions to scale your business.">
+    <title>PV2CO - AI & Automation for Business Growth</title>
+    <style>
+        /* Reset defaults */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: #000000;
+            background-color: #fff;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #eee;
+            border-radius: 0 0 20px 20px;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: 700;
+        }
+
+        .btn {
+            background-color: #000;
+            color: #fff;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #555;
+        }
+
+        /* Hero Section */
+        #hero {
+            text-align: center;
+            padding: 100px 20px;
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 20px;
+            margin: 20px;
+        }
+
+        #hero h1 {
+            font-size: 50px;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+
+        #hero p {
+            font-size: 20px;
+            max-width: 700px;
+            margin-bottom: 35px;
+        }
+
+        /* Features Section */
+        #features {
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        #features h2, #benefits h2, #testimonials h2, #cta h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 50px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .feature {
+            background-color: #f5f5f5;
+            padding: 25px;
+            border-radius: 20px;
+        }
+
+        .feature h3 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .feature p {
+            font-size: 16px;
+        }
+
+        /* Benefits Section */
+        #benefits {
+            padding: 60px 40px;
+        }
+
+        .benefit {
+            display: flex;
+            align-items: center;
+            margin-bottom: 70px;
+            background-color: #fff;
+            border-radius: 20px;
+            padding: 20px;
+        }
+
+        .benefit.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .benefit-text {
+            flex: 1;
+            padding: 25px;
+        }
+
+        .benefit-text h3 {
+            font-size: 26px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .benefit-image {
+            flex: 1;
+            padding: 25px;
+        }
+
+        .benefit-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+        }
+
+        /* Testimonials Section */
+        #testimonials {
+            padding: 60px 40px;
+            background-color: #f0f0f0;
+            text-align: center;
+            border-radius: 20px;
+            margin: 20px;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .testimonial {
+            background-color: #fff;
+            padding: 25px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+        }
+
+        .testimonial p {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .testimonial cite {
+            font-style: italic;
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* CTA Section */
+        #cta {
+            padding: 60px 40px;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 20px;
+            margin: 20px;
+        }
+
+        #cta p {
+            font-size: 20px;
+            margin-bottom: 35px;
+        }
+
+        #cta form {
+            max-width: 600px;
+            margin: 0 auto 25px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 20px;
+        }
+
+        #cta label {
+            display: block;
+            text-align: left;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        #cta input, #cta textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+
+        #cta textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .privacy-notice {
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* Footer */
+        footer {
+            padding: 30px 40px;
+            text-align: center;
+            background-color: #fff;
+            border-top: 1px solid #eee;
+            border-radius: 20px 20px 0 0;
+        }
+
+        footer p {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .social-links a, .legal-links a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+
+        .social-links a:hover, .legal-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .benefit {
+                flex-direction: column;
+            }
+            .benefit.reverse {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 15px 20px;
+            }
+            #hero {
+                padding: 60px 15px;
+            }
+            #hero h1 {
+                font-size: 36px;
+            }
+            #hero p {
+                font-size: 18px;
+            }
+            #features, #benefits, #testimonials, #cta {
+                padding: 40px 20px;
+            }
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="pv2-3.png" width="88px"></div>
+        <a href="#cta" class="btn">Get in Touch</a>
+    </header>
+    <main>
+        <section id="hero">
+            <h1>More growth, more clients, more turnover.</h1>
+            <p>You do what you do best, we handle the automation. Together, we scale your business to the next level.</p>
+            <a href="#cta" class="btn">Start Scaling Today</a>
+        </section>
+        <section id="features">
+            <h2>Our AI & Automation Services</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <h3>AI Workflow Automation</h3>
+                    <p>Eliminate repetitive tasks with intelligent automation, boosting productivity across your operations.</p>
+                </div>
+                <div class="feature">
+                    <h3>Customer Engagement AI</h3>
+                    <p>Deploy AI chatbots and personalized campaigns to enhance customer satisfaction and retention.</p>
+                </div>
+                <div class="feature">
+                    <h3>Advanced Data Analytics</h3>
+                    <p>Turn raw data into actionable insights with AI-driven analytics for smarter decision-making.</p>
+                </div>
+                <div class="feature">
+                    <h3>Custom AI Development</h3>
+                    <p>Get bespoke AI solutions designed to address your specific industry challenges and goals.</p>
+                </div>
+                <div class="feature">
+                    <h3>Predictive Business Modeling</h3>
+                    <p>Anticipate market trends and customer needs with AI-powered forecasting tools.</p>
+                </div>
+                <div class="feature">
+                    <h3>Strategic AI Consulting</h3>
+                    <p>Partner with our experts to integrate AI seamlessly into your business strategy.</p>
+                </div>
+            </div>
+        </section>
+        <section id="cta">
+            <h2>Let’s Scale Your Business</h2>
+            <p>Reach out to discover how PV2CO’s AI and automation solutions can drive your growth.</p>
+            <form action="https://formspree.io/pedromensagensindesejadas@gmail.com" method="POST">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <label for="message">How Can We Help You?</label>
+                <textarea id="message" name="message" placeholder="Tell us about your needs" required></textarea>
+                <button type="submit" class="btn">Submit Inquiry</button>
+            </form>
+            <p class="privacy-notice">Your information is safe with us. We prioritize your privacy.</p>
+        </section>
+    </main>
+    <footer>
+        <p>2025 PV2CO. All rights reserved.</p>
+    </footer>
+</body>
 </html>
