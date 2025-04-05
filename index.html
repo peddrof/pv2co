@@ -152,23 +152,26 @@
     <section id="form">
         <div class="form-container">
             <div class="w-users-usersignupformwrapper user-form">
-                <form action="/submit-form.php" method="post" enctype="multipart/form-data">
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <!-- Web3Forms Access Key (replace with your own) -->
+                    <input type="hidden" name="access_key" value="e5faf9f6-f13e-4306-beeb-c04264a85940">
+
                     <div class="w-users-userformheader title-align-left">
                         <h2 class="title">Get in Touch</h2>
                         <div class="subtitle-text">Please enter your details and message.</div>
                     </div>
                     
                     <label for="Email">Email</label>
-                    <input id="contact-email" maxlength="256" name="Email" class="input-field w-input" type="email" required=""/>
+                    <input id="contact-email" maxlength="256" name="Email" class="input-field w-input" type="email" required="">
                     
                     <label for="Name">Name</label>
-                    <input class="input-field w-input" maxlength="256" name="Name" type="text" id="contact-name" required=""/>
+                    <input class="input-field w-input" maxlength="256" name="Name" type="text" id="contact-name" required="">
                     
                     <label for="Message">Message</label>
                     <textarea class="input-field w-input" name="Message" id="contact-message" required=""></textarea>
                     
-                    <label class="w-checkbox">
-                        <input class="w-checkbox-input" name="Consent" type="checkbox" id="contact-consent" required="" checked=""/>
+                    <label style="padding-top: 10px; padding-bottom: 10px;" class="w-checkbox">
+                        <input class="w-checkbox-input" name="Consent" type="checkbox" id="contact-consent" required="" checked="">
                         <span class="w-form-label">
                             I agree to the <a href="#" class="w-inline-block">privacy policy</a> and <a href="#" class="w-inline-block">terms of service</a>.
                         </span>
@@ -180,10 +183,8 @@
                     <div class="user-form-error-msg">There was an error submitting your message. Please try again.</div>
                 </div>
             </div>
-          </div>
+        </div>
     </section>
-      
-    
     <div class="section sales">
         <div class="container-large">
             <div class="global-padding no-top-padding">

@@ -527,7 +527,7 @@ html {
   }
   
   .w-input, .w-select {
-    color: #333;
+    color: #b0b0b0;
     vertical-align: middle;
     background-color: #fff;
     border: 1px solid #ccc;
@@ -4601,7 +4601,7 @@ html {
   
   .input-field:focus, .input-field.-wfp-focus {
     border-color: var(--tertiary);
-    color: var(--tertiary);
+    color: #fff;
   }
   
   .order-item {
